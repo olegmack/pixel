@@ -1,0 +1,17 @@
+var/cache/**/*
+var/session/*
+var/export/*
+var/log/*
+var/locks/*
+var/report/*
+var/debug/*
+var/full_page_cache/**/*
+var/resource_config.json
+media/**/*
+errors/local.xml
+app/etc/local.xml
+.DS_Store
+.htaccess
+.DS_Store*
+access.log
+error.log
