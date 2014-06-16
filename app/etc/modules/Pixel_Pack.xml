@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * {license_notice}
+ *
+ * @category   Pixel
+ * @package    Pixel_Pack
+ * @copyright  {copyright}
+ * @license    {license}
+ */
+-->
+<config>
+    <modules>
+        <Pixel_Pack>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Checkout />
+            </depends>
+        </Pixel_Pack>
+    </modules>
+</config>

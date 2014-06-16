@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * {license_notice}
+ *
+ * @category   Pixel
+ * @package    Pixel_Pack
+ * @copyright  {copyright}
+ * @license    {license}
+ */
+-->
+<config>
+    <modules>
+        <Pixel_Pack>
+            <version>1.0.0</version>
+        </Pixel_Pack>
+    </modules>
+
+    <global>
+        <models>
+            <pixel_pack>
+                <class>Pixel_Pack_Model</class>
+            </pixel_pack>
+        </models>
+
+        <helpers>
+            <pixel_pack>
+                <class>Pixel_Pack_Helper</class>
+            </pixel_pack>
+        </helpers>
+
+        <blocks>
+            <pixel_pack>
+                <class>Pixel_Pack_Block</class>
+            </pixel_pack>
+        </blocks>
+
+        <resources>
+            <pixel_pack_setup>
+                <setup>
+                    <module>Pixel_Pack</module>
+                    <class>Pixel_Pack_Model_Resource_Setup</class>
+                </setup>
+            </pixel_pack_setup>
+        </resources>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <pixel_pack>
+                    <file>pixel/pack.xml</file>
+                </pixel_pack>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <Pixel_Pack>
+                    <files>
+                        <default>Pixel_Pack.csv</default>
+                    </files>
+                </Pixel_Pack>
+            </modules>
+        </translate>
+    </frontend>>
+</config>

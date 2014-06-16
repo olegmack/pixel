@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * {license_notice}
+ *
+ * @category   Pixel
+ * @package    Pixel_Pack
+ * @copyright  {copyright}
+ * @license    {license}
+ */
+-->
+<layout version="1.0.0">
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <block
+                type="pixel_pack/onepage_step"
+                name="checkout.onepage.pack"
+                after="checkout.onepage.billing"
+                template="pack/onepage/step.phtml"
+            />
+        </reference>
+    </checkout_onepage_index>
+</layout>
