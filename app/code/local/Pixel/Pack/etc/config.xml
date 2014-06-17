@@ -33,6 +33,11 @@
             <pixel_pack>
                 <class>Pixel_Pack_Block</class>
             </pixel_pack>
+            <checkout>
+                <rewrite>
+                    <onepage>Pixel_Pack_Block_Onepage</onepage>
+                </rewrite>
+            </checkout>
         </blocks>
 
         <resources>
@@ -43,6 +48,26 @@
                 </setup>
             </pixel_pack_setup>
         </resources>
+
+        <events>
+            <sales_quote_collect_totals_before>
+                <observers>
+                    <pixel_pack_quote_before_collect>
+                        <class>pixel_pack/observer</class>
+                        <method>salesQuoteCollectTotals</method>
+                    </pixel_pack_quote_before_collect>
+                </observers>
+            </sales_quote_collect_totals_before>
+
+            <sales_quote_collect_totals_after>
+                <observers>
+                    <pixel_pack_quote_after_collect>
+                        <class>pixel_pack/observer</class>
+                        <method>salesQuoteCollectTotals</method>
+                    </pixel_pack_quote_after_collect>
+                </observers>
+            </sales_quote_collect_totals_after>
+        </events>
     </global>
 
     <frontend>
@@ -63,5 +88,15 @@
                 </Pixel_Pack>
             </modules>
         </translate>
+
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <Pixel_Pack before="Mage_Checkout">Pixel_Pack</Pixel_Pack>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
     </frontend>>
 </config>

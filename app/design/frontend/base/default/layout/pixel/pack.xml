@@ -15,9 +15,11 @@
             <block
                 type="pixel_pack/onepage_step"
                 name="checkout.onepage.pack"
-                after="checkout.onepage.billing"
-                template="pack/onepage/step.phtml"
+                as="pack"
+                after="checkout.onepage.shipping"
+                template="pack/checkout/onepage/step.phtml"
             />
+            <action method='setTemplate'><template>pack/checkout/onepage.phtml</template></action>
         </reference>
     </checkout_onepage_index>
 </layout>

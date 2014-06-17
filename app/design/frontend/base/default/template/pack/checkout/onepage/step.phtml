@@ -1,0 +1,36 @@
+<?php
+/**
+ * {license_notice}
+ *
+ * @category   Pixel
+ * @package    Pixel_Pack
+ * @copyright  {copyright}
+ * @license    {license}
+ */
+?>
+<?php
+    $productsCollection = $this->getProducts();
+?>
+<form id="co-pack-form" action="">
+    <?php if ($productsCollection->count() > 0):?>
+        <?php foreach($productsCollection as $product):?>
+            <ul>
+                <li>
+                    <input type="checkbox" name="pack[<?php echo $product->getId()?>]" id="pack-option-<?php echo $product->getId() ?>" value="1"/>
+                    &nbsp;<span class="label"><label for="pack-option-<?php echo $product->getId() ?>"><?php echo $product->getName() ?></label></span>
+                </li>
+            </ul>
+        <?php endforeach?>
+    <?php else:?>
+        <?php echo $this->__('There are no available free products');?>
+    <?php endif;?>
+    <div class="buttons-set" id="pack-buttons-container">
+        <button type="button" title="<?php echo $this->__('Continue') ?>" class="button" onclick="pack.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+    </div>
+</form>
+<script type="text/javascript">
+    //<![CDATA[
+    var pack = new WelcomePack('co-pack-form', "<?php echo $this->getUrl('checkout/onepage/savePack') ?>");
+    //]]>
+</script>
+
